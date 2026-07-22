@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kitsu Persian Calendar</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="panel">
+    <header class="header">
+      <div class="logo"><img src="icons/icon48.png" alt=""></div>
+      <div>
+        <h1>مبدل تقویم شمسی Kitsu</h1>
+        <p>تنظیمات اکستنشن</p>
+      </div>
+    </header>
+
+    <section class="setting-row">
+      <div>
+        <strong>فعال‌سازی اکستنشن</strong>
+        <small>نمایش و انتخاب تاریخ‌ها به‌صورت شمسی</small>
+      </div>
+
+      <label class="switch" aria-label="فعال‌سازی اکستنشن">
+        <input id="enabled" type="checkbox">
+        <span class="slider"></span>
+      </label>
+    </section>
+
+    <section class="url-section">
+      <label for="kitsu-url">آدرس Kitsu</label>
+      <input
+        id="kitsu-url"
+        type="text"
+        inputmode="url"
+        autocomplete="off"
+        spellcheck="false"
+        placeholder="مثلاً http://localhost"
+      >
+
+      <button id="use-current-tab" type="button" class="secondary">
+        استفاده از آدرس تب فعلی
+      </button>
+
+      <p class="hint">
+        اکستنشن فقط روی همین دامنه اجرا می‌شود. مسیرهای مختلف همان دامنه نیز پشتیبانی می‌شوند.
+      </p>
+    </section>
+
+    <div id="status" class="status" role="status"></div>
+
+    <button id="save" type="button" class="primary">
+      ذخیره تنظیمات
+    </button>
+
+    <footer>نسخه ۱.۱.۰ | Developed by: Maisam Hosaini
+      <br>
+      maisamh80@gmail.com
+    </footer>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>

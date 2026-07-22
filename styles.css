@@ -1,0 +1,222 @@
+[data-kpc-processed="true"] {
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+}
+
+time[data-kpc-processed="true"] {
+  cursor: help;
+}
+
+/* Vue DatePicker host */
+.dp__menu.kpc-datepicker-host {
+  position: relative !important;
+  overflow: hidden !important;
+  min-width: 262px !important;
+  min-height: 290px !important;
+}
+
+/*
+  تقویم اصلی را از دید کاربر پنهان می‌کنیم،
+  اما در DOM نگه می‌داریم تا کلیک تاریخ واقعی به Kitsu منتقل شود.
+*/
+.dp__menu.kpc-datepicker-host > :not(.kpc-jalali-calendar) {
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.kpc-jalali-calendar {
+  position: absolute;
+  inset: 0;
+  z-index: 2147483647;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  background: var(--dp-background-color, #262b34);
+  color: var(--dp-text-color, #ffffff);
+  font-family: inherit;
+  direction: rtl;
+  user-select: none;
+}
+
+.kpc-header {
+  display: grid;
+  grid-template-columns: 34px 1fr 34px;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  margin-bottom: 8px;
+}
+
+.kpc-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.kpc-nav,
+.kpc-day,
+.kpc-today {
+  border: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.kpc-nav {
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  background: transparent;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.kpc-nav:hover,
+.kpc-day:hover,
+.kpc-today:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.kpc-weekdays,
+.kpc-days {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(28px, 1fr));
+  align-items: center;
+  text-align: center;
+}
+
+.kpc-weekdays {
+  margin-bottom: 4px;
+}
+
+.kpc-weekday {
+  padding: 5px 0;
+  font-size: 12px;
+  font-weight: 700;
+  opacity: 0.88;
+}
+
+.kpc-days {
+  flex: 1;
+  grid-auto-rows: minmax(30px, 1fr);
+}
+
+.kpc-day {
+  min-width: 28px;
+  min-height: 28px;
+  padding: 0;
+  border-radius: 5px;
+  background: transparent;
+  font-size: 13px;
+}
+
+.kpc-day.kpc-outside {
+  opacity: 0.35;
+}
+
+.kpc-day.kpc-today-cell {
+  outline: 1px solid var(--dp-primary-color, #1976d2);
+  outline-offset: -2px;
+}
+
+.kpc-footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+.kpc-today {
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 12px;
+}
+
+
+[data-kpc-compact-date="true"] {
+  direction: ltr;
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+
+input[data-kpc-input-ready="true"] {
+  direction: ltr !important;
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+}
+
+
+select[data-kpc-persian-filter="month"],
+select[data-kpc-persian-filter="year"] {
+  direction: rtl;
+  unicode-bidi: isolate;
+}
+
+option[data-kpc-filter-option="month"],
+option[data-kpc-filter-option="year"] {
+  direction: rtl;
+}
+
+
+.fc[data-kpc-fullcalendar="true"] {
+  font-variant-numeric: tabular-nums;
+}
+
+.fc [data-kpc-fullcalendar-year="true"],
+.fc [data-kpc-fullcalendar-month="true"],
+.fc [data-kpc-fullcalendar-day="true"] {
+  unicode-bidi: isolate;
+}
+
+.fc [data-kpc-fullcalendar-month="true"] {
+  direction: rtl;
+}
+
+.fc [data-kpc-fullcalendar-day="true"] {
+  direction: rtl;
+}
+
+.fc [data-kpc-fullcalendar-weekday="true"] {
+  direction: rtl;
+  white-space: nowrap;
+  font-size: 0.9em;
+}
+
+
+.timeline-header[data-kpc-schedule-header="true"] .day-number,
+.timeline-header[data-kpc-schedule-header="true"] .week-number,
+.timeline-header[data-kpc-schedule-header="true"] .month-name {
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+}
+
+.timeline-header .month-name.kpc-hidden-gregorian-month {
+  display: none !important;
+}
+
+.timeline-header .month-name[data-kpc-schedule-month="true"] {
+  display: inline-block !important;
+  direction: rtl;
+  white-space: nowrap;
+}
+
+.timeline-header [data-kpc-schedule-day="true"] {
+  direction: ltr;
+}
+
+
+select[data-kpc-monthly-year="true"],
+select[data-kpc-monthly-month="true"] {
+  direction: rtl;
+  unicode-bidi: isolate;
+}
+
+[data-kpc-monthly-summary="true"] {
+  direction: rtl;
+  unicode-bidi: isolate;
+  white-space: nowrap;
+}
